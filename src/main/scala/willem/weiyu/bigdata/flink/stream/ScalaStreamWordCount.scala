@@ -10,7 +10,7 @@ import org.apache.flink.streaming.api.windowing.time.Time
   * @Description
   * @Date 2019/3/7 16:29
   */
-object ScalaWordCount {
+object ScalaStreamWordCount {
   val TEXT_PATH = "example" + File.separator + "word.txt"
 
   def main(args: Array[String]): Unit = {

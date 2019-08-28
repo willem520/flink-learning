@@ -15,7 +15,7 @@ import java.io.File;
  * @create 2018/5/2 10:25
  * @since 1.0.0
  */
-public class JavaWordCount {
+public class JavaStreamWordCount {
     private static final String TEXT_PATH = "example" + File.separator + "word.txt";
 
     public static void main(String[] args) throws Exception {

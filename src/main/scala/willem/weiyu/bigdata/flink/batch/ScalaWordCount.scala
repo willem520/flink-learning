@@ -1,9 +1,8 @@
-package willem.weiyu.bigdata.flink.table
+package willem.weiyu.bigdata.flink.batch
 
 import java.io.File
 
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.api.windowing.time.Time
+import org.apache.flink.api.scala._
 
 /**
   * @Author weiyu
@@ -14,14 +13,14 @@ object ScalaWordCount {
   val TEXT_PATH = "example" + File.separator + "word.txt"
 
   def main(args: Array[String]): Unit = {
-    val env = StreamExecutionEnvironment.getExecutionEnvironment
+    val env = ExecutionEnvironment.getExecutionEnvironment
     val text = env.readTextFile(TEXT_PATH)
 
     val counts = text.flatMap({
       _.toLowerCase.split("\\s+") filter {
         _.nonEmpty
       }
-    }).map((_,1)).keyBy(0).timeWindow(Time.seconds(1)).sum(1)
+    }).map{(_, 1)}.groupBy(0).sum(1)
 
     counts.print()
 
