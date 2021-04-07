@@ -23,7 +23,5 @@ object ScalaWordCount {
     }).map{(_, 1)}.groupBy(0).sum(1)
 
     counts.print()
-
-    env.execute("scalaWordCount")
   }
 }

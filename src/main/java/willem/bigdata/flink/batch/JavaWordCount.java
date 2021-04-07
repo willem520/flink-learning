@@ -33,6 +33,5 @@ public class JavaWordCount {
                 return new Tuple2<>(w1.f0, w1.f1+w2.f1);
             }
         }).print();
-        env.execute("javaWordCount");
     }
 }
