@@ -18,7 +18,7 @@
         <maven.version>3.6.1</maven.version>
         <fastjson.version>1.2.47</fastjson.version>
         <lombok.version>1.18.6</lombok.version>
-        <mysql.version>8.0.16</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <javax.persist.version>1.0.2</javax.persist.version>
     </properties>
 
